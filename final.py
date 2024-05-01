@@ -39,7 +39,7 @@ if __name__ == '__main__':
         .getOrCreate()
 
     # Read in mnist_train.csv dataset
-    df = spark.read.option("inferSchema", "true").csv('../mnist_train.csv').orderBy(rand()).repartition(2)
+    df = spark.read.option("inferSchema", "true").csv('/mnist_train.csv').orderBy(rand()).repartition(2)
 
     network = Net()
 
